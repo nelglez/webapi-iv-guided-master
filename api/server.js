@@ -9,14 +9,12 @@ server.use(helmet());
 server.use(express.json());
 
 server.get("/", (req, res) => {
-  res
-    .status(200)
-    .json({
-      message: `Welcome ${process.env.COHORT}`,
-      fact: process.env.FUN_FACT || "I have no fun facts",
-    });
+  res.status(200).json({
+    message: `Welcome ${process.env.COHORT}`,
+    fact: process.env.FUN_FACT || "I have no fun facts",
+  });
   // Shoutouts.find()
-  // .then(shoutouts => {
+  // .then(shoutouts => {//
   //   res.status(200).json(shoutouts);
   // })
   // .catch (error => {
